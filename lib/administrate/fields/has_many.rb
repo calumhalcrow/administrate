@@ -18,7 +18,7 @@ module Administrate
         permitted_attribute.keys.first
       end
 
-      def candidate_options
+      def associated_resource_options
         candidate_resources.map do |resource|
           [display_candidate_resource(resource), resource.id]
         end

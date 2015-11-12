@@ -11,13 +11,13 @@ module Administrate
         self.class.permitted_attribute(attribute)
       end
 
-      def candidate_options
+      def associated_resource_options
         candidate_resources.map do |resource|
           [display_candidate_resource(resource), resource.id]
         end
       end
 
-      def associated_resource
+      def displayed_associated_resource
         associated_dashboard.display_resource(data)
       end
 

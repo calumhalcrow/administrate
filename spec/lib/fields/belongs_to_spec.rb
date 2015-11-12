@@ -29,7 +29,7 @@ describe Administrate::Field::BelongsTo do
         association = Administrate::Field::BelongsTo.
           with_options(class_name: "Foo")
         field = association.new(:customers, [], :show)
-        candidates = field.candidate_options
+        candidates = field.associated_resource_options
 
         expect(Foo).to have_received(:all)
         expect(candidates).to eq([])

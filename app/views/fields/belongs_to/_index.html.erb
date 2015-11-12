@@ -16,5 +16,5 @@ By default, the relationship is rendered as a link to the associated object.
 %>
 
 <% if field.data %>
-  <%= link_to field.associated_resource, [Administrate::NAMESPACE, field.data] %>
+  <%= link_to field.displayed_associated_resource, [Administrate::NAMESPACE, field.data] %>
 <% end %>
