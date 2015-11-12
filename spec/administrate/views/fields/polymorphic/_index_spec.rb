@@ -17,8 +17,12 @@ describe "fields/polymorphic/_index", type: :view do
   context "with an associated record" do
     it "renders a link to the record" do
       product = create(:product)
-      polymorphic = double(data: product, associated_resource: product.name)
       product_path = polymorphic_path([:admin, product])
+      polymorphic = instance_double(
+        "Administrate::Field::Polymorphic",
+        data: product,
+        displayed_associated_resource: product.name,
+      )
 
       render(
         partial: "fields/polymorphic/index.html.erb",

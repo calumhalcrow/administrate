@@ -3,7 +3,7 @@ require_relative "base"
 module Administrate
   module Field
     class Polymorphic < Base
-      def associated_resource
+      def displayed_associated_resource
         associated_dashboard.display_resource(data)
       end
 
